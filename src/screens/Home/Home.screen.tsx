@@ -1,4 +1,4 @@
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, TouchableOpacity } from 'react-native';
 
 // Layout
 import Container from '../../components/layout/Container';
@@ -11,7 +11,7 @@ import Tabs from '../../components/layout/Tabs';
 // Styles
 import styles from './styles'
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 
     const cards = [
         {
@@ -78,18 +78,31 @@ const HomeScreen = () => {
         }
     ]
 
+    const header = {
+        title: 'Unicorn Baby',
+        subtitle: 'Some cool subtitle here'
+    }
+
+    const handleRouteChange = () => {
+        navigation.navigate('Category')
+    }
+
     return (
         <Background>
-            <Header image={require('../../assets/images/header.jpg')} />
+            <Header
+                title={header.title}
+                subtitle={header.subtitle}
+                image={require('../../assets/images/header.jpg')} />
             <Searchbar />
             <ScrollView>
                 <Container>
                     <View style={styles.productGrid}>
                         {cards.map((card, i) => {
-                            return <Card
-                                key={i}
-                                card={card}
-                            />
+                            return (
+                                <TouchableOpacity key={i} onPress={handleRouteChange}>
+                                    <Card card={card} />
+                                </TouchableOpacity>
+                            )
                         })}
                     </View>
                 </Container>
