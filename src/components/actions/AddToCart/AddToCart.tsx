@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
+import { TouchableOpacity } from 'react-native'
+
+// Icons
+import { AntDesign } from '@expo/vector-icons';
+import styles from './styles';
 
 const AddToCart = () => {
     return (
-        <View>
-            <Text>Add to cart</Text>
-        </View>
+        <TouchableOpacity style={styles.button}>
+            <AntDesign name="shoppingcart" size={20} color='#ef0a6a' />
+        </TouchableOpacity>
     )
 }
 

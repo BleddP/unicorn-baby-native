@@ -35,14 +35,14 @@ const HomeScreen = ({ navigation }) => {
             title: "Yummy Mummy's",
             content: 'Glowing and fashionable, all for you',
             image: require('../../assets/images/pregnant.png'),
-            background: require('../../assets/backgrounds/teal.png'),
+            background: require('../../assets/backgrounds/rainbow.png'),
             textColor: '#FFF'
         },
         {
             id: 4,
             title: 'The Big Guns',
             content: 'Cribs, buggies, Car Seats, you name it!',
-            background: require('../../assets/backgrounds/rainbow.png'),
+            background: require('../../assets/backgrounds/teal.png'),
             textColor: '#FFF'
         },
         {
@@ -66,14 +66,14 @@ const HomeScreen = ({ navigation }) => {
             title: "Yummy Mummy's",
             content: 'Glowing and fashionable, all for you',
             image: require('../../assets/images/pregnant.png'),
-            background: require('../../assets/backgrounds/teal.png'),
+            background: require('../../assets/backgrounds/rainbow.png'),
             textColor: '#FFF'
         },
         {
             id: 8,
             title: 'The Big Guns',
             content: 'Cribs, buggies, Car Seats, you name it!',
-            background: require('../../assets/backgrounds/rainbow.png'),
+            background: require('../../assets/backgrounds/teal.png'),
             textColor: '#FFF'
         }
     ]
