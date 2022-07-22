@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import { ScrollView, View } from "react-native"
 
 // Layout
@@ -11,10 +12,20 @@ import AddToCart from "../../components/actions/AddToCart"
 import Caroussel from "../../components/ui/Caroussel"
 import Button from "../../components/ui/Button"
 
+// Store
+import toasterContext from "../../store/toaster/toasterContext"
+
 // Styles
 import styles from './styles'
 
 const ProductScreen = () => {
+
+    const { newToaster } = useContext(toasterContext)
+
+    const handleAddToCart = () => {
+        newToaster('Item added to cart!', 3000)
+    }
+
     return (
         <Background>
             <ScrollView>
@@ -31,7 +42,7 @@ const ProductScreen = () => {
                     <Paragraph>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil modi, eum perspiciatis doloremque consequuntur veritatis! Iusto quam fugit esse facere. Tempora autem, maxime fugiat pariatur minima debitis quibusdam excepturi amet voluptatum ducimus sed vel nam nobis repellat laborum, dolorum numquam ab eveniet ullam! Repudiandae, temporibus porro nisi iure tempora tempore.
                     </Paragraph>
-                    <Button title="Add to cart" />
+                    <Button title="Add to cart" onPress={handleAddToCart} />
                     <H2>Materials</H2>
                     <Paragraph>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, minus.

@@ -11,6 +11,16 @@ const styles = StyleSheet.create({
         borderRadius: '50%',
         backgroundColor: '#F6F6F6',
         ...boxShadow
+    },
+    popup: {
+        width: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    popupText: {
+        marginLeft: 12,
+        marginBottom: 0
     }
 })
 

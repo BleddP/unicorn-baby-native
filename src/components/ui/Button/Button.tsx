@@ -7,12 +7,13 @@ import { H4 } from "../../typography";
 import styles from "./styles";
 
 interface Props {
-    title: string
+    title: string,
+    onPress: () => void
 }
 
-const Button: React.FC<Props> = ({ title }) => {
+const Button: React.FC<Props> = ({ title, onPress }) => {
     return (
-        <TouchableOpacity style={styles.button} onPress={() => console.log('pressed')}>
+        <TouchableOpacity style={styles.button} onPress={onPress}>
             <ImageBackground source={require('../../../assets/backgrounds/teal.png')}>
                 <H4 color='#FFF' style={styles.text}>{title}</H4>
             </ImageBackground>
