@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         flex: 1
+    },
+    h1: {
+        marginBottom: 0
     }
 })
 
