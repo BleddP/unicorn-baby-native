@@ -9,6 +9,7 @@ import Container from "../../components/layout/Container"
 import { H1, H2, Paragraph } from "../../components/typography"
 import LikeItem from "../../components/actions/LikeItem"
 import AddToCart from "../../components/actions/AddToCart"
+import Share from "../../components/actions/Share/Share"
 import Caroussel from "../../components/ui/Caroussel"
 import Button from "../../components/ui/Button"
 
@@ -32,6 +33,7 @@ const ProductScreen = () => {
                 <Container padding>
                     <H1>Ponderosa girl dress</H1>
                     <View style={styles.actions}>
+                        <Share />
                         <LikeItem />
                         <AddToCart />
                     </View>
