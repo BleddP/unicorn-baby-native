@@ -12,6 +12,7 @@ import ProductScreen from './src/screens/Product';
 
 // Components
 import Toaster from './src/components/ui/Toaster';
+import Modal from './src/components/ui/Modal';
 
 // Store
 import ToasterState from './src/store/toaster/ToasterState';
@@ -26,9 +27,12 @@ function App() {
           <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Category" component={CategoryScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Product" component={ProductScreen} />
+          <Stack.Group screenOptions={{ presentation: 'modal' }}>
+            <Stack.Screen name="Modal" component={Modal} options={{ title: 'Filter catergories' }} />
+          </Stack.Group>
         </Stack.Navigator>
-        <Toaster />
       </NavigationContainer>
+      <Toaster />
     </ToasterState>
   );
 }
