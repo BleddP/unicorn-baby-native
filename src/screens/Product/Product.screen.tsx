@@ -5,12 +5,15 @@ import { ScrollView, View } from "react-native"
 import Background from "../../components/layout/Background"
 import Container from "../../components/layout/Container"
 
-// Components
+// Typography
 import { H1, H2, Paragraph } from "../../components/typography"
+
+// Components
+import Caroussel from "../../components/ui/Caroussel"
+import ProductIcons from "../../components/ui/ProductIcons"
 import LikeItem from "../../components/actions/LikeItem"
 import AddToCart from "../../components/actions/AddToCart"
 import Share from "../../components/actions/Share/Share"
-import Caroussel from "../../components/ui/Caroussel"
 import Button from "../../components/ui/Button"
 
 // Store
@@ -46,12 +49,7 @@ const ProductScreen = () => {
                     </Paragraph>
                     <Button title="Add to cart" onPress={handleAddToCart} />
                     <H2>Materials</H2>
-                    <Paragraph>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, minus.
-                    </Paragraph>
-                    <Paragraph>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet perferendis inventore iste voluptatem.
-                    </Paragraph>
+                    <ProductIcons />
                 </Container>
             </ScrollView>
         </Background>

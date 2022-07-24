@@ -1,5 +1,5 @@
 import { TouchableOpacity, Image, View } from "react-native"
-import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from '@react-navigation/native';
 
 // Typography
 import { H4 } from "../../typography"
@@ -12,7 +12,8 @@ const Item = ({ item }) => {
     const navigation = useNavigation()
 
     const viewItem = () => {
-        navigation.navigate("Product")
+        console.log('view item')
+        // navigation.navigate("Product")
     }
 
     return (

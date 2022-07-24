@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     card: {
         height: 'auto',
         width: 165,
-        marginBottom: 12,
+        marginBottom: 0,
         borderRadius: 15,
         ...boxShadow
     },
