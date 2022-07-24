@@ -4,6 +4,7 @@ import H3 from './H3';
 import H4 from './H4';
 import Paragraph from "./Paragaph";
 import Span from "./Span";
+import Small from "./Small";
 
 export {
     H1,
@@ -11,5 +12,6 @@ export {
     H3,
     H4,
     Paragraph,
-    Span
+    Span,
+    Small
 }

@@ -7,9 +7,15 @@ interface Props {
 }
 
 const Paragraph: React.FC<Props> = ({ children, style, color }) => {
-    return (
-        <Text style={{ ...styles.paragraph, ...style, color: color }}>{children}</Text>
-    )
+    if (color) {
+        return (
+            <Text style={{ ...styles.paragraph, ...style, color: color }}>{children}</Text>
+        )
+    } else {
+        return (
+            <Text style={{ ...styles.paragraph, ...style }}>{children}</Text>
+        )
+    }
 }
 
 export default Paragraph

@@ -1,4 +1,4 @@
-import { SafeAreaView, TouchableOpacity, FlatList, View, ScrollView } from 'react-native';
+import { TouchableOpacity, View, ScrollView, Image } from 'react-native';
 
 // Layout
 import Container from '../../components/layout/Container';
@@ -7,6 +7,9 @@ import Header from '../../components/layout/Header';
 import Searchbar from '../../components/ui/Searchbar';
 import Card from '../../components/ui/Card';
 import Tabs from '../../components/layout/Tabs';
+
+// Typography
+import { H2, Paragraph } from '../../components/typography';
 
 // Styles
 import styles from './styles'
@@ -66,23 +69,6 @@ const HomeScreen = ({ navigation }) => {
             <Searchbar />
             <ScrollView style={{ flex: 1 }}>
                 <Container>
-                    {/* <FlatList
-                        numColumns={2}
-                        columnWrapperStyle={{
-                            flexDirection: 'row',
-                            justifyContent: 'space-between'
-                        }}
-                        horizontal={false}
-                        data={cards}
-                        keyExtractor={(item) => item.id.toString()}
-                        renderItem={({ item, index }) => {
-                            return (
-                                <TouchableOpacity key={index} onPress={handleRouteChange}>
-                                    <Card card={item} />
-                                </TouchableOpacity>
-                            )
-                        }}
-                    /> */}
                     <View style={styles.productGrid}>
                         {cards.map((card, i) => {
                             return (
@@ -91,6 +77,14 @@ const HomeScreen = ({ navigation }) => {
                                 </TouchableOpacity>
                             )
                         })}
+                    </View>
+                    <View>
+                        <H2>About Unicorn Baby</H2>
+                        <Paragraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste voluptates iure ut voluptatem obcaecati voluptate eum cum quibusdam dolorum modi.</Paragraph>
+                        <Paragraph>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste voluptates iure ut voluptatem obcaecati voluptate eum cum quibusdam dolorum modi.</Paragraph>
+                        <View style={styles.imageShadow}>
+                            <Image source={require('../../assets/images/tiff.jpeg')} style={styles.founderImage} />
+                        </View>
                     </View>
                 </Container>
             </ScrollView>

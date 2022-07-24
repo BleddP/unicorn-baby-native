@@ -7,9 +7,15 @@ interface Props {
 }
 
 const Span: React.FC<Props> = ({ children, style, color }) => {
-    return (
-        <Text style={{ ...styles.span, ...style, color: color }}>{children}</Text>
-    )
+    if (color) {
+        return (
+            <Text style={{ ...styles.span, ...style, color: color }}>{children}</Text>
+        )
+    } else {
+        return (
+            <Text style={{ ...styles.span, ...style }}>{children}</Text>
+        )
+    }
 }
 
 export default Span

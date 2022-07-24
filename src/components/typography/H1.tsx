@@ -7,9 +7,15 @@ interface Props {
 }
 
 const H1: React.FC<Props> = ({ children, style, color }) => {
-    return (
-        <Text style={{ ...styles.h1, ...style, color: color }}>{children}</Text>
-    )
+    if (color) {
+        return (
+            <Text style={{ ...styles.h1, ...style, color: color }}>{children}</Text>
+        )
+    } else {
+        return (
+            <Text style={{ ...styles.h1, ...style }}>{children}</Text>
+        )
+    }
 }
 
 export default H1
